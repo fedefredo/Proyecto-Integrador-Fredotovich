@@ -1,0 +1,415 @@
+.main-header {
+    background-color: black;
+    font-size: 16px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.nav-logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.user-nav-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: start;
+    flex-direction: column;
+    margin-bottom: auto;
+    height: 60px;
+    width: 100%;
+}
+
+/* .buy-logo, */
+.user-logo {
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.user-logo {
+    position: relative;
+}
+
+
+
+/* .user-logo:hover~.user-data {
+    display: block;
+} */
+
+.user-data:hover {
+    display: block;
+}
+
+.user-profile {
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.user-profile i {
+    margin-right: .5rem;
+}
+
+.user-profile-img {
+    border-radius: 50%;
+    height: 25px;
+    margin-right: .5rem;
+}
+
+.logout-btn, .user-action i {
+    text-decoration: none;
+    color: black;
+}
+
+
+.user-action {
+    padding: .25rem 1rem .25rem .25rem;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    margin-top: .25rem;
+}
+
+.logout-btn:hover {
+    text-decoration: underline solid black
+}
+
+
+
+.input-check {
+    display: none;
+}
+
+.burger-menu {
+    width: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+.burger-line {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    position: relative;
+}
+
+.burger-line::before,
+.burger-line::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(-10px);
+    transition: .3s ease-in-out;
+}
+
+.input-check:checked~.burger-menu .burger-line {
+    background-color: transparent;
+}
+
+.input-check:checked~.burger-menu .burger-line::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.input-check:checked~.burger-menu .burger-line::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.burger-line::after {
+    transform: translateY(10px);
+}
+
+.input-check:checked~.main-nav {
+    width: 240px;
+}
+
+
+
+.main-nav {
+    background-color: black;
+    width: 0;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    overflow: hidden;
+    transition: width .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 1rem 0;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+    }
+}
+
+.nav-link .active {
+    color: white;
+}
+
+
+
+
+.user-info {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    margin-bottom: auto;
+    margin-left: auto;
+    height: 60px;
+    width: 100%;
+
+    * {
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-container {
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        /* margin-right: .5rem; */
+        /* margin: 1rem 0 .5rem auto; */
+        /* position: absolute;
+        left: 80%;
+        z-index: 100; */
+    
+        .cart-icon {
+            cursor: pointer;
+            position: relative;
+            transition: color .25s ease-in-out;
+            color: white;
+    
+            &:hover {
+                color: #333;
+            }
+    
+            &::after {
+                content: attr(data-count);
+                display: block;
+                position: absolute;
+                font-size: .5rem;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: -10px;
+                right: -6px;
+                background-color: red;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+    }
+    
+
+    .user-avatar {
+        padding: .25rem;
+        margin-right: .5rem;
+
+        .user-img {
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 1rem;
+        }
+
+        &:hover {
+            .user-data {
+                display: block;
+                /* max-height: 300px; */
+            }
+        }
+
+        .user-data {
+            display: none;
+            background-color: white;
+            color: black;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            height: 100px;
+            width: 200px;
+            border-radius: 20px;
+            padding: 0 1.5rem 0 1.5rem;
+            z-index: 3;
+            box-shadow: 0 0 20px black;
+            
+    
+            /* display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: calc(100% - 5px);
+            border-radius: 4px;
+            overflow: hidden;
+            right: 10px;
+            background-color: white;
+            max-height: 0;
+            -webkit-transition: max-height .4s;
+            -moz-transition: max-height .4s;
+            -ms-transition: max-height .4s;
+            -o-transition: max-height .4s;
+            transition: max-height .4s; */
+        }
+    }
+
+
+    /* .dropdown-menu {
+        position: relative;
+
+        &:focus,
+        &:hover {
+            .dropdown-links {
+                max-height: 300px;
+            }
+        }
+
+        .dropdown-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: calc(100% - 5px);
+            border-radius: 4px;
+            overflow: hidden;
+            right: 10px;
+            background-color: white;
+            max-height: 0;
+            -webkit-transition: max-height .4s;
+            -moz-transition: max-height .4s;
+            -ms-transition: max-height .4s;
+            -o-transition: max-height .4s;
+            transition: max-height .4s;
+            z-index: 4;
+
+            .nav-link {
+                color: #333;
+                width: 100%;
+                display: flex;
+                gap: .5rem;
+
+                &:hover {
+                    color: white;
+                    background-color: rgb(42, 115, 188)
+                }
+            }
+        }
+    } */
+
+    /* .icon-container {
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        margin: .5rem;
+
+        .cart-icon {
+            cursor: pointer;
+            position: relative;
+            transition: color .25s ease-in-out;
+            color: white;
+
+            &:hover {
+                color: #333;
+            }
+
+            &::after {
+                content: attr(data-count);
+                display: block;
+                position: absolute;
+                font-size: .5rem;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: -10px;
+                right: -6px;
+                background-color: red;
+                color: white;
+                border-radius: 50%;
+            }
+        }
+    } */
+
+
+}
+
+
+@media screen and (width > 768px) {
+    .main-header {
+        justify-content: start;
+
+        .user-nav-bar {
+            margin-left: auto;
+            order: 3;
+        }
+
+        .burger-menu {
+            display: none;
+        }
+
+        .input-check:checked~.main-nav {
+            width: auto;
+        }
+
+        .main-nav {
+            position: relative;
+            top: 0;
+            width: 1500px;
+            flex-direction: row;
+            overflow: visible;
+
+            .nav-link {
+                padding: 1rem;
+            }
+        }
+
+        .user-info {
+            position: relative;
+            right: 0;
+            flex-direction: row;
+            width: auto;
+            position: absolute;
+            /* left: 80%; */
+            z-index: 101;
+        }
+
+        .user-action {
+            flex-direction: row;
+            /* margin-top: 1rem; */
+        }
+
+        
+    }
+}

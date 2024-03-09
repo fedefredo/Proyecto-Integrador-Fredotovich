@@ -1,0 +1,58 @@
+.about-us {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.presentation-card {
+    background-color: black;
+    width: 390px;
+    height: 100%;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px white;
+}
+
+.proyect-info {
+    background-color: black;
+    width: 390px;
+    height: 100%;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px white;
+}
+
+.proyect-title {
+    color: white;
+    text-align: center;
+    margin: 2.5rem;
+    font-size: 40px;
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.proyect-description {
+    color: white;
+    margin: 2rem;
+}
+
+#proyect-phrase {
+    font-size: 23px;
+    text-align: center;
+}
+
+@media screen and (width > 768px) {
+.about-us {
+    flex-direction: row;
+}
+
+.presentation-card {
+    width: 500px;
+}
+
+.proyect-info {
+    width: 500px;
+}
+
+}

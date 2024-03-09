@@ -1,0 +1,46 @@
+.footer {
+    background-color: black;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-column {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+}
+
+.footer-item {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item i {
+    margin-right: .5rem;
+}
+
+#footer-title {
+    align-items: center !important;
+
+}
+
+.logo-ecommerce {
+    height: 70px;
+}
+
+.footer-column h2 {
+    font-family: "Chakra Petch", sans-serif;
+}
+
+@media screen and (width > 768px) {
+    .footer {
+        flex-direction: row;
+        height: 150px;
+    }
+}

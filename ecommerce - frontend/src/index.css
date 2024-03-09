@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Kanit:wght@100;200;300;500;700;900&family=Oswald:wght@200;400;700&family=PT+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,300;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Chakra+Petch:ital,wght@0,300;0,500;1,700&family=Kanit:wght@100;200;300;500;700;900&family=Oswald:wght@200;400;700&family=PT+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,300;1,900&family=Teko:wght@300;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+body {
+  background-color: rgb(76, 72, 72);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kanit", sans-serif;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-admin {
+  text-align: center;
+  font-size: 50px;
+  margin: 2rem 1rem 2rem 1rem ;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.admin-form {
+  background-color: black;
+  border-radius: 20px;
+  margin: 2rem auto auto auto;
+  width: 350px;
+  position: relative;
+}
+
+.form-info {
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  color: white;
+}
+
+.form-info input, .form-info textarea, .form-info select {
+  padding: .5rem;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-product {
+  display: flex;
+  justify-content: start;
+}
+
+.search-product input {
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-submit {
+  padding: 2rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  color: white;
+}
+
+.title-products {
+  text-align: left;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.form-active {
+  margin: 2rem 0 0 2rem;
+}
+
+.active input {
+  width: 20px;
+  height: 20px;
+}
+
+.btn {
+  color: white;
+  padding: .25rem;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+}
+
+.btn-delete {
+  background-color: red;
+}
+
+.btn-delete:hover {
+  background-color: rgb(127, 20, 20);
+}
+
+.btn-cancel {
+  position: absolute;
+  left: 300px;
+}
+
+.btn-edit {
+  background-color: green;
+}
+
+.btn-edit:hover {
+  background-color: rgb(14, 66, 14);
+}
+
+.input-group:has(input[type="checkbox"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: .5rem;
+}
+
+.form-sticky {
+  position: sticky;
+  top: 50px;
+}
+
+.table-container {
+  flex: 1 0 0;
+  margin-bottom: 2rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 98%;
+  overflow-x: scroll;
+  display: block;
+}
+
+.table-head {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.table-body {
+  tr {
+    &:nth-child(even) {
+        background-color: #333;
+    }
+    td {
+        padding: 10px;
+    }
+  }
+}
+
+.table td {
+  border: 1px solid #fc0505;
+  text-align: center;
+  height: 91px;
+}
+
+.product-table-img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.user-table-img {
+  border-radius: 50%;
+  width: 55px;
+  height: 60px;
+}
+
+.table-name {
+  text-align: center;
+  font-weight: bold;
+}
+
+.table-email {
+  color: #777;
+  font-style: italic;
+}
+
+.table-actions {
+  width: 180px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.pagination-btn {
+  width: 20px;
+  height: 30px;
+  margin-right: .5rem;
+  border-radius: 0;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+@media screen and (width > 1100px) {
+  .admin-dashboard {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin-left: 2rem;
+  }
+
+  .flex-between {
+    margin-left: auto;
+  }
+
+  .form-container {
+    margin-bottom: 2rem;
+  }
+
+  .table-container {
+    margin-left: auto;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+} 
+
+@media screen and (width > 2400px) {
+  .admin-dashboard {
+    margin: 0 auto;
+  }
+}
